@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Page Tunnel",
+  "description": "Help you find your target page fast",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "index.html",
+    "default_title": "Click here!"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ]
+
+}

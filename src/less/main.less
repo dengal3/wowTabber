@@ -1,0 +1,38 @@
+@import './utils/color.less';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    width: 250px;
+}
+
+ul {
+    list-style: none;
+}
+
+#container {
+    
+}
+
+.tab-list {
+    background-color: @bg-col;
+    color: @text-col;
+    padding: 1em;
+}
+
+.tab-item {
+    line-height: 1.4em;
+    font-size: 1.3em;
+    padding: 0.2em;
+
+    &:hover {
+        cursor: pointer;
+        color: @second-text-col;
+        border: 0.2em solid @text-col;
+        background-color: @second-bg-col;
+        border-radius: 0.4em;
+        font-weight: bold;
+    }
+}
