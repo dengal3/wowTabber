@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body, html {
-    width: 250px;
+    width: 300px;
 }
 
 ul {
@@ -27,6 +27,22 @@ ul {
     font-size: 1.3em;
     padding: 0.2em;
 
+    .tab-favicon {
+        width: 1.5em;
+        height: 1.5em;
+        border: 0.2em solid @text-col;
+        border-radius: 50%;
+        margin-right: 0.5em;
+        display: inline-block;
+        overflow: hidden;
+        text-align: center;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
     &:hover {
         cursor: pointer;
         color: @second-text-col;
@@ -34,5 +50,9 @@ ul {
         background-color: @second-bg-col;
         border-radius: 0.4em;
         font-weight: bold;
+
+        .tab-favicon {
+            border: 0.2em solid @second-text-col;
+        }
     }
 }

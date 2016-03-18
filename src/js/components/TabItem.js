@@ -7,28 +7,24 @@ export default class TabItem extends React.Component {
     }
 
     activateTab(e) {
-        var _this = this;
         e.stopPropagation();
-        
-        chrome.tabs.highlight({
-                tabs: _this.props.index
-        }, (windowId) => {});
-    }
-
-    closeTab() {
-        var _this = this;
-        chrome.tabs.remove({
-            tabs: _this.props.index
-        }, (windowId) => {});
+        chrome.tabs.get(this.props.id, (tab) => {
+            chrome.tabs.highlight({
+                "tabs": tab.index
+            }, (windowId) => {});
+        })
     }
 
     render() {
         var title = this.props.title;
-        title = title.length > 15 ? title.substr(0, 15)+"..." : title;
+        var key= this.props.key;
+        title = title.length > 20 ? title.substr(0, 20)+"..." : title;
         return (
             <li className="tab-item" onClick={this.activateTab}>
+                <div className="tab-favicon">
+                    <img src={this.props.favIconUrl} />
+                </div>
                 {title}
-                <span className="close" onClick={this.closeTab} >close</span>
             </li>
         )
     }
