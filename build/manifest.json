@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+
+  "name": "wowTabber",
+  "description": "Help you find your target page fast",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Click here!"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "presistent": false
+  },
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ]
+
+}
