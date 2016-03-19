@@ -1,5 +1,5 @@
 # wowTabber
-### A chrome extension based on es6, react and backpack.
+### A chrome extension based on es6, react and webpack.
 ### What it can do
 + List all your tabs title
 + Click and go to your tab
